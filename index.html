@@ -58,8 +58,9 @@ body{
   margin-bottom:24px;
   flex-wrap:wrap;
   gap:10px;
+  min-width:0;
 }
-.masthead .title-wrap{ display:flex; align-items:center; gap:10px; }
+.masthead .title-wrap{ display:flex; align-items:center; gap:10px; min-width:0; }
 .masthead h1{
   font-family:'Caveat', cursive;
   font-weight:700;
@@ -69,6 +70,7 @@ body{
   color:var(--chalk);
   transform:rotate(-2deg);
   display:inline-block;
+  white-space:nowrap;
 }
 .bean-icon{ width:26px; height:26px; flex-shrink:0; transform:rotate(-15deg); }
 .masthead .sub{
@@ -81,6 +83,8 @@ body{
   padding:5px 12px;
   border-radius:999px;
   border:1px dashed rgba(238,231,216,0.35);
+  min-width:0;
+  max-width:100%;
 }
 
 .mode-toggle{
@@ -114,6 +118,7 @@ body{
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
   gap:22px;
+  min-width:0;
 }
 @media (max-width:720px){ .board{ grid-template-columns:1fr; } }
 
@@ -127,6 +132,7 @@ body{
   box-shadow:0 10px 26px rgba(0,0,0,0.35), inset 0 0 40px rgba(0,0,0,0.35);
   padding:26px 24px;
   position:relative;
+  min-width:0;
 }
 .card.chalk::before{
   content:"MENU";
@@ -331,6 +337,7 @@ input[type=range]::-moz-range-thumb{
   position:relative;
   box-shadow:0 12px 28px rgba(0,0,0,0.4), 0 2px 0 rgba(255,255,255,0.15) inset;
   transform:rotate(0.6deg);
+  min-width:0;
 }
 .card.ticket::after{
   content:"";
